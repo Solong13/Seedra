@@ -1,0 +1,14 @@
+.but {
+    position: absolute;
+    top: 33px;
+    left: 1014px;
+}
+
+/* Для корзини */
+
+.orders {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+/* Для корзини */
