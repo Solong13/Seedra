@@ -8,7 +8,6 @@ require('partials/headerTemplateCart.php');
 
 <?php
 
-
 $status="";
 // var_dump($_SESSION["shopping_cart"][2]);
 if (isset($_POST['action']) && $_POST['action']=="remove"){
@@ -19,7 +18,7 @@ if(!empty($_SESSION["shopping_cart"])) {
       
       // echo $key.'-'.$value;
       
-      // $_SESSION["shopping_cart"] = null;
+      //  $_SESSION["shopping_cart"] = null;
       if($_POST['id'] == $key ){
       unset($_SESSION["shopping_cart"][$key]);
       $status = "<div class='box' style='color:red;'>
@@ -59,11 +58,11 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
   <td>ITEMS TOTAL</td>
   </tr>	
   <?php		
-  foreach ($_SESSION["shopping_cart"] as $key => $product){
+  foreach ($_SESSION["shopping_cart"] as $key => $product){// // выведет: '0-значення', '1-значення', '3-значення'.
   ?>
   <tr>
   <td>
-  <img src='img/<?php echo $product["img"]; ?>' />
+  <img src='img/<?php echo $product["img"]; ?>' style="width: 100px;" />
   </td>
   <td><?php echo $product["title"]; ?><br />
   <form method='post' action=''>

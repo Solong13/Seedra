@@ -39,7 +39,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/Seedra/config/helpers.php');
     <link rel="stylesheet" href="assets/css/mainForCart.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/styleForLogin.css">
-    
+    <link rel="stylesheet" href="assets/css/slider.css">
     <title>SEEDRA</title>
 </head>
 <body>

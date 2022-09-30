@@ -1,9 +1,7 @@
-
-        <?php
+<?php 
+    $status="";
        
-        $status="";
-       
-        if (isset($_POST['id']) && $_POST['id']!=""){
+    if (isset($_POST['id']) && $_POST['id']!=""){
         $code = $_POST['id'];        
        
         $result = mysqli_query($conn,"SELECT * FROM `pro` WHERE `id`='$code'");
@@ -27,6 +25,7 @@
             'imageLike'=>$imageLike,
             'quantity'=>1)
         );
+        
         // $_SESSION["shopping_cart"] = null;
       
         if(empty($_SESSION["shopping_cart"])) {
@@ -46,8 +45,7 @@
             }
 
             }
-        }
-        ?>
+}?>
 <header class="header" id="header">
         <div class="container">
             <div class="nav">
@@ -104,17 +102,30 @@
                     ?>
                 </ul>
             </div>
-            <div class="mainPicture">
-                <img src="img/Frame 8.png" >
-            </div>  
+
+            <!-- Слайдер -->
+            <div class='wrapper'>
+                <div class='slider-continer'>
+                    <div class="mainPicture">
+                        <div class="slider-item"><img src="img/Frame 81.png"></div>
+                        <div class="slider-item"><img src="img/vegetable1.jpg"></div>
+                        <div class="slider-item"><img src="img/vegetable2.jpg"></div>
+                    </div>  
+                </div>
+                <div class="slider-buttons">
+                    <button class="btn-prev"></button>
+                    <button class="btn-next"></button>
+                    
+                </div>
+            </div>
+            <!-- Слайдер -->
+
             <img src="img/Frame 150.png" class="photoUnderMain">    
         </div>
     </header>
     
-
     <section class="main" id="main">
         <div class="container">
-
             <div class="sort">
                 <h2>Our products.</h2>
                 <nav class="nav_menu">
@@ -122,7 +133,6 @@
                         <li> <a href="/Seedra" class="forSort">Sort by</a> 
                         <span class="menu_arrow arrow"></span>
                             <ul class="sub_menu">
-
                                 <li>                          
                                 <a href="index.php?sort_by=most_expensive">Most expensive</a> 
                                 </li>
@@ -132,7 +142,6 @@
                     </ul>
                 </nav>
             </div>
-            
             <div class="allGoods">
                 <ul class="choiceGoods">
                     <li class="first"><a href="#"><img src="img/lif.png" class="lif">ALL</a></li>
@@ -144,11 +153,7 @@
                     <li><a href="#"><img src="img/Flower.svg">FLOWERS</a></li>
                 </ul>
             </div>
-
-            
-            
         </div>
-
 
 <div class="container">
 
@@ -158,10 +163,7 @@ position: relative;">
 <div class="wrapper mt-5">
     <div class="container">
         <div class="row" >
-
             <div class="product-cards mb-5" >
-
-                    
 
                     <?php   
                         $sql = "SELECT * FROM pro";
@@ -209,25 +211,20 @@ position: relative;">
                         </div><!-- /product-card -->
                     </form>
                 <?php } ?>
-
-                
-
             </div><!-- /product-cards -->
-
         </div><!-- /row -->
 
-        <div class="row">
-            <nav aria-label="Page navigation example">
-                <ul class="pagination" >
-                    <li class="page-item" ><a class="page-link" href="#"style="color: #359740;">Previous</a></li>
-                    <li class="page-item"><a class="page-link" href="#" style="color: #359740;">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#" style="color: #359740;">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#" style="color: #359740;">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#" style="color: #359740;">Next</a></li>
-                </ul>
-            </nav>
-        </div><!-- /row -->
-
+    <div class="row">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination" >
+                <li class="page-item" ><a class="page-link" href="#"style="color: #359740;">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#" style="color: #359740;">1</a></li>
+                <li class="page-item"><a class="page-link" href="#" style="color: #359740;">2</a></li>
+                <li class="page-item"><a class="page-link" href="#" style="color: #359740;">3</a></li>
+                <li class="page-item"><a class="page-link" href="#" style="color: #359740;">Next</a></li>
+            </ul>
+        </nav>
+    </div><!-- /row -->
     </div><!-- /container -->
 </div><!-- /wrapper -->
 
@@ -274,16 +271,10 @@ position: relative;">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Оформить заказ</button>
             </div>
+            </div>
+            </div>
         </div>
     </div>
 </div>
 
-</div>
-
-
-</div>
-
-
-        
-        
-    </section>
+</section>
